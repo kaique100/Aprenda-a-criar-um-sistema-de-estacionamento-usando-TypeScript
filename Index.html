@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento</title>
+
+    <style>
+        * {
+            background-color: #45182c;
+            color: aliceblue;
+            text-align: center;
+        }
+
+        input:focus {
+            box-shadow: 0 0 0 0;
+            outline: 0;
+        }
+
+        input[type=text] {
+            border: none;
+            border-bottom: 2px solid aliceblue;
+            width: 30%;
+            text-align: center;
+            color: aliceblue;
+            margin-top: 25%;
+        }
+
+        input::placeholder {
+            color: aliceblue;
+        }
+
+        table {
+            margin-top: 5%;
+            border-collapse: collapse;
+            width: 50%;
+
+        }
+
+        th,
+        td {
+            font-family: sans-serif;
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+
+        button:hover {
+            cursor: pointer;
+            box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+        }
+
+        .delete{
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="nome" placeholder="Digite o nome do veículo: " autocomplete="off">
+    <input type="text" id="placa" placeholder="Digite o número da placa do veículo: " autocomplete="off">
+    <button id="cadastrar">Cadastrar</button>
+
+    <table align="center">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Placa</th>
+                <th>Entrada</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="patio"></tbody>
+    </table>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
